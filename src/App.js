@@ -18,8 +18,9 @@ React.createElement(
   "comp "
 );
 */
+
 import React from 'react';
-import { Route,Link, BrowserRouter as Router } from 'react-router-dom'
+import { Route, Link, BrowserRouter as Router } from 'react-router-dom'
 
 import HomePage from "./Components/HomePage";
 import ImportTypes from "./Components/ImportTypes";
@@ -36,25 +37,25 @@ import './App.css';
 
 function App() {
   return (
-      <Router>
-            <ul>
-                <li>
-                    <Link to="/Home">Home</Link>
-                </li>
-                <li>
-                    <Link to="/imports">Type Of imports</Link>
-                </li>
-                <li>
-                    <Link to="/setstate">SetState Explanation</Link>
-                </li>
-            </ul>
-        <div>
-          <Route path="/"/>
-          <Route path="/Home" component={HomePage} />
-          <Route path="/imports" component={ImportTypes} />
-          <Route path="/setstate" component={SetState} />
-        </div>
-      </Router>
+    <Router>
+      <ul>
+        <li>
+          <Link to="/Home">Home</Link>
+        </li>
+        <li>
+          <Link to="/imports">Type Of imports</Link>
+        </li>
+        <li>
+          <Link to="/setstate">SetState Explanation</Link>
+        </li>
+      </ul>
+      <div>
+        <Route path="/" />
+        <Route path="/Home" component={HomePage} />
+        <Route path="/imports" component={ImportTypes} />
+        <Route path="/setstate" component={SetState} />
+      </div>
+    </Router>
   );
 }
 
@@ -64,7 +65,7 @@ export default App;
 */
 
 /*Why should we use default export?
-by using default you express that's going to be member in that module which would be 
-imported if no specific member name is provided. You could also express you want to import 
-the specific member called App by doing so: 
-import {App} from './App.jsx'; in this case, no default is needed*/ 
+by using default you express that's going to be member in that module which would be
+imported if no specific member name is provided. You could also express you want to import
+the specific member called App by doing so:
+import {App} from './App.jsx'; in this case, no default is needed*/

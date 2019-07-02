@@ -1,7 +1,7 @@
 //Class to demonstrate the setState concept by creating a stateful component
 import React, { Component } from 'react';
 import Container from 'react-bootstrap/Container'
-import {Row} from 'react-bootstrap'
+import { Row } from 'react-bootstrap'
 import Square from './Square/Square';
 /*Why do we import Component
 Answer: State i.e an object that determines how that component renders & behaves, is an 
@@ -40,6 +40,7 @@ export class SetState extends Component {
             number: 0,
         }
     }
+
     updateNumber() {
         columns = []
         for (var j = 0; j < this.refs.number.value; j++) {
@@ -49,9 +50,11 @@ export class SetState extends Component {
             number: this.refs.number.value,
         })
     }
+
     renderSquare(ind) {
         return <Square index={ind} />
     }
+
     render() {
         return (
             <div>
@@ -72,7 +75,7 @@ export class SetState extends Component {
                                 }
                             </p>
                             <p>.</p>
-                            </p>
+                        </p>
                     )
                 }
                 )}
